@@ -185,6 +185,8 @@ struct BookView: View {
     }
     
     private func loadPDF() {
+        /// In the final app, this will be replaced with a network request to fetch the PDF and download it to Bundle if it cannot be found
+        /// For demo purposes they should already be pre-downloaded
         if let url = Bundle.main.url(forResource: "algorithms", withExtension: "pdf") {
             pdfDocument = PDFDocument(url: url)
         }
