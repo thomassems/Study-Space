@@ -83,7 +83,9 @@ struct BookView: View {
                 )
                 .overlay(alignment: .topLeading) {
                     Button {
-                        selectedBookID = nil
+                        withAnimation {
+                            selectedBookID = nil
+                        }
                     } label: {
                         Image(systemName: "xmark")
                             .foregroundColor(.black)
