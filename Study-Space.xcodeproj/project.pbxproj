@@ -20,6 +20,8 @@
 		D9A8BC2C2C958AE20059C5BC /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8BC2B2C958AE20059C5BC /* Library.swift */; };
 		D9A8BC2E2C958AF40059C5BC /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8BC2D2C958AF40059C5BC /* LibraryView.swift */; };
 		D9A8BC302C958B0A0059C5BC /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8BC2F2C958B0A0059C5BC /* LibraryViewModel.swift */; };
+		D9A8BC362C9591B60059C5BC /* LibraryBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8BC352C9591B60059C5BC /* LibraryBookView.swift */; };
+		D9A8BC382C9592710059C5BC /* LibraryAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8BC372C9592710059C5BC /* LibraryAddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		D9A8BC2B2C958AE20059C5BC /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		D9A8BC2D2C958AF40059C5BC /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		D9A8BC2F2C958B0A0059C5BC /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		D9A8BC352C9591B60059C5BC /* LibraryBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryBookView.swift; sourceTree = "<group>"; };
+		D9A8BC372C9592710059C5BC /* LibraryAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				D9A8BC2D2C958AF40059C5BC /* LibraryView.swift */,
+				D9A8BC352C9591B60059C5BC /* LibraryBookView.swift */,
+				D9A8BC372C9592710059C5BC /* LibraryAddView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,9 +258,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9A8BC262C958A860059C5BC /* Book.swift in Sources */,
+				D9A8BC362C9591B60059C5BC /* LibraryBookView.swift in Sources */,
 				D9A8BC2C2C958AE20059C5BC /* Library.swift in Sources */,
 				BD664DB72C956AF0001C15FE /* ContentView.swift in Sources */,
 				BD664DB52C956AF0001C15FE /* Study_SpaceApp.swift in Sources */,
+				D9A8BC382C9592710059C5BC /* LibraryAddView.swift in Sources */,
 				D9A8BC2E2C958AF40059C5BC /* LibraryView.swift in Sources */,
 				BD664DB92C956AF0001C15FE /* ImmersiveView.swift in Sources */,
 				D9A8BC282C958AB70059C5BC /* BookView.swift in Sources */,
