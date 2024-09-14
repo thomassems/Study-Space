@@ -11,6 +11,7 @@ struct LibraryView: View {
     @StateObject private var viewModel = LibraryViewModel()
     @State private var showingAddBook = false
     @State private var selectedCategory: BookCategory? = .all
+    @State private var selectedBookID: UUID? = nil
 
     enum BookCategory: String, CaseIterable {
         case recents = "Recents"
@@ -19,10 +20,17 @@ struct LibraryView: View {
     }
     
     var body: some View {
-        NavigationSplitView {
-            sidebar
-        } detail: {
-            bookGrid
+        Group {
+            if let bookID = selectedBookID,
+               let book = viewModel.library.books.first(where: { $0.id == bookID }) {
+                BookView(book: book, selectedBookID: $selectedBookID)
+            } else {
+                NavigationSplitView {
+                    sidebar
+                } detail: {
+                    bookGrid
+                }
+            }
         }
     }
     
@@ -47,6 +55,9 @@ struct LibraryView: View {
                                 viewModel.toggleFavorite(for: book)
                             }
                         ))
+                        .onTapGesture {
+                            selectedBookID = book.id
+                        }
                     }
                 }
                 .padding()

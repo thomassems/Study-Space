@@ -10,7 +10,8 @@ import SwiftUI
 import PDFKit
 
 struct BookView: View {
-    /// ADD SOME BINDING VARIABLE HERE TO PASS IN
+    let book: Book
+    @Binding var selectedBookID: UUID?
     @State private var pdfDocument: PDFDocument?
     @State private var currentPage: Int = 0
     @State private var query: String = ""
@@ -82,7 +83,7 @@ struct BookView: View {
                 )
                 .overlay(alignment: .topLeading) {
                     Button {
-                        
+                        selectedBookID = nil
                     } label: {
                         Image(systemName: "xmark")
                             .foregroundColor(.black)
@@ -200,5 +201,16 @@ struct BookView: View {
 }
 
 #Preview(windowStyle: .automatic) {
-    BookView()
+    BookView(
+        book: Book(
+            id: UUID(),
+            title: "Sample Book",
+            author: "John Doe",
+            coverImageUrl: URL(string: "https://example.com/cover.jpg"),
+            pdfUrl: Bundle.main.url(forResource: "algorithms", withExtension: "pdf")!,
+            lastReadDate: Date(),
+            isFavorite: false
+        ),
+        selectedBookID: .constant(UUID())
+    )
 }
