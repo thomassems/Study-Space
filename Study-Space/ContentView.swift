@@ -10,45 +10,51 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-
-    @State private var showImmersiveSpace = false
-    @State private var immersiveSpaceIsShown = false
-
-    @Environment(\.openImmersiveSpace) var openImmersiveSpace
-    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+    @State private var showLibrary = false
+    @State private var opacity = 1.0
 
     var body: some View {
-        VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
-
-            Text("Hello, world!")
-
-            Toggle("Show ImmersiveSpace", isOn: $showImmersiveSpace)
-                .font(.title)
-                .frame(width: 360)
-                .padding(24)
-                .glassBackgroundEffect()
-        }
-        .padding()
-        .onChange(of: showImmersiveSpace) { _, newValue in
-            Task {
-                if newValue {
-                    switch await openImmersiveSpace(id: "ImmersiveSpace") {
-                    case .opened:
-                        immersiveSpaceIsShown = true
-                    case .error, .userCancelled:
-                        fallthrough
-                    @unknown default:
-                        immersiveSpaceIsShown = false
-                        showImmersiveSpace = false
-                    }
-                } else if immersiveSpaceIsShown {
-                    await dismissImmersiveSpace()
-                    immersiveSpaceIsShown = false
-                }
+        ZStack {
+            startPage
+                .opacity(opacity)
+            
+            if showLibrary {
+                LibraryView()
+                    .opacity(1 - opacity)
             }
         }
+        .animation(.easeInOut(duration: 0.5), value: opacity)
+    }
+    
+    var startPage: some View {
+        VStack(spacing: 50) {
+            VStack(spacing: 20) {
+                Image(systemName: "pencil.and.outline")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 100, height: 100)
+                    .foregroundColor(.primary)
+                
+                Text("Welcome to Study Space")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+            }
+            
+            Button(action: {
+                withAnimation(.easeInOut(duration: 0.5)) {
+                    showLibrary = true
+                    opacity = 0
+                }
+            }) {
+                Text("Enter Study Space")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .padding()
+            }
+            .tint(Color.blue)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.gray.opacity(0.1))
     }
 }
 
