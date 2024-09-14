@@ -104,18 +104,27 @@ struct BookView: View {
             Spacer()
             
             HStack {
-                TextField("Ask a question...", text: $query)
-                Button {
+                HStack {
+                    TextField("Ask a question...", text: $query)
                     
+                    Button {
+                        /// Activate cohere
+                    } label: {
+                        Image(systemName: "paperplane")
+                    }
+                }
+                .padding()
+                .background(
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color(.systemGray5))
+                )
+                
+                Button {
+                    /// Activate voiceflow
                 } label: {
-                    Image(systemName: "paperplane")
+                    Image(systemName: "mic")
                 }
             }
-            .padding()
-            .background(
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color(.systemGray5))
-            )
             .padding(.horizontal)
             .padding(.top)
         }
