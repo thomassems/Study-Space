@@ -64,12 +64,12 @@ struct BookView: View {
         GeometryReader { geometry in
             HStack(spacing: 0) {
                 pdfContent
-                    .frame(width: geometry.size.width * 2 / 3) // 2/3 of the total width
+                    .frame(width: geometry.size.width * 1 / 2)
 
                 Divider()
 
                 chatbot
-                    .frame(width: geometry.size.width * 1 / 3) // 1/3 of the total width
+                    .frame(width: geometry.size.width * 1 / 2) 
             }
         }
         .padding(.bottom)
