@@ -75,7 +75,7 @@ struct BookView: View {
     var pdfContent: some View {
         if let document = pdfDocument {
             // Pass summaryText binding to PDFPageView
-            PDFPageView(pdfDocument: document, pageIndex: currentPage, summaryText: $summaryText, showSummaryScreen: $showSummaryScreen)
+            PDFPageView(pdfDocument: document, pageIndex: currentPage)
                 .ignoresSafeArea(.all)
                 .background(.white)
                 .gesture(

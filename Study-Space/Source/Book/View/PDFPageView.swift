@@ -14,8 +14,6 @@ import SwiftUI
 struct PDFPageView: UIViewRepresentable {
     let pdfDocument: PDFDocument?
     let pageIndex: Int
-    @Binding var summaryText: String   // Bind the summary text to update in the main view
-    @Binding var showSummaryScreen: Bool  // Bind the state to show the summary screen
     
     // Required makeUIView method for UIViewRepresentable
     func makeUIView(context: Context) -> PDFView {
