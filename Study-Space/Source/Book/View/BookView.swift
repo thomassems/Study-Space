@@ -15,6 +15,11 @@ struct BookView: View {
     @State private var pdfDocument: PDFDocument?
     @State private var currentPage: Int = 0
     @State private var query: String = ""
+    @State private var lockedIn = false
+    
+    @State private var immersiveSpaceIsShown: Bool = false
+    @Environment(\.openImmersiveSpace) var openImmersiveSpace
+    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
     
     var body: some View {
         VStack {
@@ -23,6 +28,24 @@ struct BookView: View {
             buttons
         }
         .onAppear(perform: loadPDF)
+        .onChange(of: lockedIn) { _, newValue in
+              Task {
+                  if newValue {
+                      switch await openImmersiveSpace(id: "ImmersiveSpace") {
+                      case .opened:
+                          immersiveSpaceIsShown = true
+                      case .error, .userCancelled:
+                          fallthrough
+                      @unknown default:
+                          immersiveSpaceIsShown = false
+                          lockedIn = false
+                      }
+                  } else if immersiveSpaceIsShown {
+                      await dismissImmersiveSpace()
+                      immersiveSpaceIsShown = false
+                  }
+              }
+          }
     }
     
     var content: some View {
@@ -60,7 +83,9 @@ struct BookView: View {
                 )
                 .overlay(alignment: .topLeading) {
                     Button {
-                        selectedBookID = nil
+                        withAnimation {
+                            selectedBookID = nil
+                        }
                     } label: {
                         Image(systemName: "xmark")
                             .foregroundColor(.black)
@@ -131,11 +156,18 @@ struct BookView: View {
             }
             
             Button {
-                
+                /// Set resource of ImmersiveState.shared (string) here!
+                /// CODE TO SET IMMERSIVE STATE HERE
+                lockedIn.toggle()
             } label: {
                 HStack {
                     Image(systemName: "person.and.background.dotted")
-                    Text("Lock in")
+                    
+                    if !lockedIn {
+                        Text("Lock in")
+                    } else {
+                        Text("Lock out")
+                    }
                 }
             }
             

@@ -9,26 +9,37 @@ import SwiftUI
 import RealityKit
 import RealityKitContent
 
+struct ImmersionState {
+    static var shared = "room" /// this is a global variable to store the current immersive state
+}
+
 struct ImmersiveView: View {
     var body: some View {
         RealityView { content in
-            // Add the initial RealityKit content
-            if let immersiveContentEntity = try? await Entity(named: "Immersive", in: realityKitContentBundle) {
-                content.add(immersiveContentEntity)
+            guard let url = Bundle.main.url(forResource: ImmersionState.shared, withExtension: "jpg"),
+                  let resource = try? await TextureResource(contentsOf: url) else {
+                  // If the asset isn't available, something is wrong with the app.
+                  fatalError("Unable to load texture.")
+              }
+              var material = UnlitMaterial()
+              material.color = .init(texture: .init(resource))
 
-                // Add an ImageBasedLight for the immersive content
-                guard let resource = try? await EnvironmentResource(named: "ImageBasedLight") else { return }
-                let iblComponent = ImageBasedLightComponent(source: .single(resource), intensityExponent: 0.25)
-                immersiveContentEntity.components.set(iblComponent)
-                immersiveContentEntity.components.set(ImageBasedLightReceiverComponent(imageBasedLight: immersiveContentEntity))
+              // Attach the material to a large sphere.
+              let entity = Entity()
+              entity.components.set(ModelComponent(
+                  mesh: .generateSphere(radius: 1000),
+                  materials: [material]
+              ))
 
-                // Put skybox here.  See example in World project available at
-                // https://developer.apple.com/
-            }
-        }
+              // Ensure the texture image points inward at the viewer.
+              entity.scale *= .init(x: -1, y: 1, z: 1)
+
+              content.add(entity)
+          }
     }
 }
 
 #Preview(immersionStyle: .full) {
     ImmersiveView()
+        .previewLayout(.sizeThatFits)
 }

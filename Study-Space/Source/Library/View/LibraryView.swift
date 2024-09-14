@@ -56,7 +56,9 @@ struct LibraryView: View {
                             }
                         ))
                         .onTapGesture {
-                            selectedBookID = book.id
+                            withAnimation(.easeIn(duration: 0.1)) {
+                                selectedBookID = book.id
+                            }
                         }
                     }
                 }
