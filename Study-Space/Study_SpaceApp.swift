@@ -13,7 +13,6 @@ struct Study_SpaceApp: App {
         WindowGroup {
             ContentView()
         }
-        
         WindowGroup(id: "Polynomial") {
             PolynomialGraphView()
         }
@@ -22,6 +21,10 @@ struct Study_SpaceApp: App {
             Polynomial3DGraphView()
         }
 
+        WindowGroup(id: "Summary") {
+            SummaryScreen()
+        }
+    
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
         }.immersionStyle(selection: .constant(.full), in: .full)
