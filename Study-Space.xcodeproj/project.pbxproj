@@ -17,6 +17,11 @@
 		BD8DDB022C95C922006841EB /* algorithms.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BD8DDB012C95C922006841EB /* algorithms.pdf */; };
 		BD8DDB042C95C993006841EB /* PDFPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DDB032C95C993006841EB /* PDFPageView.swift */; };
 		BD8DDB072C95D58E006841EB /* room.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD8DDB062C95D58E006841EB /* room.jpg */; };
+		BDC80E8E2C961D8F00DF39BF /* PolynomialGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC80E8D2C961D8F00DF39BF /* PolynomialGraphView.swift */; };
+		BDC80E902C96217100DF39BF /* Polynomial3DGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC80E8F2C96217100DF39BF /* Polynomial3DGraphView.swift */; };
+		BDC80E942C9630AC00DF39BF /* math.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BDC80E912C9630AB00DF39BF /* math.pdf */; };
+		BDC80E952C9630AC00DF39BF /* chem.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BDC80E922C9630AB00DF39BF /* chem.pdf */; };
+		BDC80E962C9630AC00DF39BF /* phys.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BDC80E932C9630AC00DF39BF /* phys.pdf */; };
 		D9A8BC262C958A860059C5BC /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8BC252C958A860059C5BC /* Book.swift */; };
 		D9A8BC282C958AB70059C5BC /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8BC272C958AB70059C5BC /* BookView.swift */; };
 		D9A8BC2A2C958AC20059C5BC /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8BC292C958AC20059C5BC /* BookViewModel.swift */; };
@@ -40,6 +45,11 @@
 		BD8DDB012C95C922006841EB /* algorithms.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = algorithms.pdf; sourceTree = "<group>"; };
 		BD8DDB032C95C993006841EB /* PDFPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFPageView.swift; sourceTree = "<group>"; };
 		BD8DDB062C95D58E006841EB /* room.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = room.jpg; sourceTree = "<group>"; };
+		BDC80E8D2C961D8F00DF39BF /* PolynomialGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolynomialGraphView.swift; sourceTree = "<group>"; };
+		BDC80E8F2C96217100DF39BF /* Polynomial3DGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polynomial3DGraphView.swift; sourceTree = "<group>"; };
+		BDC80E912C9630AB00DF39BF /* math.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = math.pdf; sourceTree = "<group>"; };
+		BDC80E922C9630AB00DF39BF /* chem.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = chem.pdf; sourceTree = "<group>"; };
+		BDC80E932C9630AC00DF39BF /* phys.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = phys.pdf; sourceTree = "<group>"; };
 		D9A8BC252C958A860059C5BC /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D9A8BC272C958AB70059C5BC /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		D9A8BC292C958AC20059C5BC /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
@@ -115,6 +125,9 @@
 		BD8DDAFE2C95C88F006841EB /* PDFs */ = {
 			isa = PBXGroup;
 			children = (
+				BDC80E922C9630AB00DF39BF /* chem.pdf */,
+				BDC80E912C9630AB00DF39BF /* math.pdf */,
+				BDC80E932C9630AC00DF39BF /* phys.pdf */,
 				BD8DDB012C95C922006841EB /* algorithms.pdf */,
 			);
 			path = PDFs;
@@ -196,6 +209,8 @@
 			children = (
 				D9A8BC272C958AB70059C5BC /* BookView.swift */,
 				BD8DDB032C95C993006841EB /* PDFPageView.swift */,
+				BDC80E8D2C961D8F00DF39BF /* PolynomialGraphView.swift */,
+				BDC80E8F2C96217100DF39BF /* Polynomial3DGraphView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,6 +286,9 @@
 			files = (
 				BD664DBD2C956AF1001C15FE /* Assets.xcassets in Resources */,
 				BD8DDB072C95D58E006841EB /* room.jpg in Resources */,
+				BDC80E942C9630AC00DF39BF /* math.pdf in Resources */,
+				BDC80E952C9630AC00DF39BF /* chem.pdf in Resources */,
+				BDC80E962C9630AC00DF39BF /* phys.pdf in Resources */,
 				BD664DC02C956AF1001C15FE /* Preview Assets.xcassets in Resources */,
 				BD8DDB022C95C922006841EB /* algorithms.pdf in Resources */,
 				BD664DBB2C956AF0001C15FE /* ImageBasedLighting.skybox in Resources */,
@@ -286,6 +304,7 @@
 			files = (
 				D9A8BC262C958A860059C5BC /* Book.swift in Sources */,
 				D9A8BC362C9591B60059C5BC /* LibraryBookView.swift in Sources */,
+				BDC80E902C96217100DF39BF /* Polynomial3DGraphView.swift in Sources */,
 				D9A8BC2C2C958AE20059C5BC /* Library.swift in Sources */,
 				BD664DB72C956AF0001C15FE /* ContentView.swift in Sources */,
 				BD664DB52C956AF0001C15FE /* Study_SpaceApp.swift in Sources */,
@@ -293,6 +312,7 @@
 				BD8DDB042C95C993006841EB /* PDFPageView.swift in Sources */,
 				D9A8BC2E2C958AF40059C5BC /* LibraryView.swift in Sources */,
 				BD664DB92C956AF0001C15FE /* ImmersiveView.swift in Sources */,
+				BDC80E8E2C961D8F00DF39BF /* PolynomialGraphView.swift in Sources */,
 				D9A8BC282C958AB70059C5BC /* BookView.swift in Sources */,
 				D9A8BC302C958B0A0059C5BC /* LibraryViewModel.swift in Sources */,
 				D9A8BC2A2C958AC20059C5BC /* BookViewModel.swift in Sources */,

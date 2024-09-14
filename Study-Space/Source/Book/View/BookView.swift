@@ -9,6 +9,12 @@ import Foundation
 import SwiftUI
 import PDFKit
 
+struct Polynomial {
+    var coefficients: [Double]
+    
+    static var shared = Polynomial(coefficients: [])
+}
+
 struct BookView: View {
     let book: Book
     @Binding var selectedBookID: UUID?
@@ -20,6 +26,7 @@ struct BookView: View {
     @State private var immersiveSpaceIsShown: Bool = false
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+    @Environment(\.openWindow) var openWindow
     
     var body: some View {
         VStack {
@@ -92,6 +99,14 @@ struct BookView: View {
                     }
                     .padding()
                 }
+                .onTapGesture {
+                    if lockedIn {
+                        /// Render the diagrams and/or 3D models
+                        Polynomial.shared.coefficients = [2, -1, -9, 2]
+                        openWindow(id: "Polynomial")
+//                        openWindow(id: "Polynomial3D")
+                    }
+                }
         } else {
             Text("Loading PDF...")
         }
@@ -156,6 +171,8 @@ struct BookView: View {
             }
             .disabled(currentPage == 0)
             
+            Spacer()
+            
             Button {
                 /// Set resource of ImmersiveState.shared (string) here!
                 /// CODE TO SET IMMERSIVE STATE HERE
@@ -185,8 +202,6 @@ struct BookView: View {
     }
     
     private func loadPDF() {
-        /// In the final app, this will be replaced with a network request to fetch the PDF and download it to Bundle if it cannot be found
-        /// For demo purposes they should already be pre-downloaded
         if let url = Bundle.main.url(forResource: "algorithms", withExtension: "pdf") {
             pdfDocument = PDFDocument(url: url)
         }

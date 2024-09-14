@@ -13,6 +13,14 @@ struct Study_SpaceApp: App {
         WindowGroup {
             ContentView()
         }
+        
+        WindowGroup(id: "Polynomial") {
+            PolynomialGraphView()
+        }
+        
+        WindowGroup(id: "Polynomial3D") {
+            Polynomial3DGraphView()
+        }
 
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
