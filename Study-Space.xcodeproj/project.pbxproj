@@ -16,6 +16,7 @@
 		BD664DC02C956AF1001C15FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD664DBF2C956AF1001C15FE /* Preview Assets.xcassets */; };
 		BD8DDB022C95C922006841EB /* algorithms.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BD8DDB012C95C922006841EB /* algorithms.pdf */; };
 		BD8DDB042C95C993006841EB /* PDFPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DDB032C95C993006841EB /* PDFPageView.swift */; };
+		BD8DDB072C95D58E006841EB /* room.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD8DDB062C95D58E006841EB /* room.jpg */; };
 		D9A8BC262C958A860059C5BC /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8BC252C958A860059C5BC /* Book.swift */; };
 		D9A8BC282C958AB70059C5BC /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8BC272C958AB70059C5BC /* BookView.swift */; };
 		D9A8BC2A2C958AC20059C5BC /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8BC292C958AC20059C5BC /* BookViewModel.swift */; };
@@ -38,6 +39,7 @@
 		BD664DC12C956AF1001C15FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD8DDB012C95C922006841EB /* algorithms.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = algorithms.pdf; sourceTree = "<group>"; };
 		BD8DDB032C95C993006841EB /* PDFPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFPageView.swift; sourceTree = "<group>"; };
+		BD8DDB062C95D58E006841EB /* room.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = room.jpg; sourceTree = "<group>"; };
 		D9A8BC252C958A860059C5BC /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D9A8BC272C958AB70059C5BC /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		D9A8BC292C958AC20059C5BC /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		BD664DAF2C956AF0001C15FE /* Study-Space */ = {
 			isa = PBXGroup;
 			children = (
+				BD8DDB052C95D581006841EB /* Resources */,
 				BD8DDAFE2C95C88F006841EB /* PDFs */,
 				D9A8BC1C2C958A270059C5BC /* Source */,
 				BD664DB42C956AF0001C15FE /* Study_SpaceApp.swift */,
@@ -115,6 +118,14 @@
 				BD8DDB012C95C922006841EB /* algorithms.pdf */,
 			);
 			path = PDFs;
+			sourceTree = "<group>";
+		};
+		BD8DDB052C95D581006841EB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BD8DDB062C95D58E006841EB /* room.jpg */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		D9A8BC1C2C958A270059C5BC /* Source */ = {
@@ -259,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD664DBD2C956AF1001C15FE /* Assets.xcassets in Resources */,
+				BD8DDB072C95D58E006841EB /* room.jpg in Resources */,
 				BD664DC02C956AF1001C15FE /* Preview Assets.xcassets in Resources */,
 				BD8DDB022C95C922006841EB /* algorithms.pdf in Resources */,
 				BD664DBB2C956AF0001C15FE /* ImageBasedLighting.skybox in Resources */,
