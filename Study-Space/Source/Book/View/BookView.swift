@@ -156,14 +156,6 @@ struct BookView: View {
             }
             .disabled(currentPage == 0)
             
-            Spacer()
-            
-            Button {
-                
-            } label: {
-                Image(systemName: "bookmark")
-            }
-            
             Button {
                 /// Set resource of ImmersiveState.shared (string) here!
                 /// CODE TO SET IMMERSIVE STATE HERE
