@@ -9,13 +9,6 @@ import Foundation
 import SwiftUI
 import PDFKit
 
-struct Polynomial {
-    var coefficients: [Double]
-    
-    static var shared = Polynomial(coefficients: [])
-}
-
-
 struct BookView: View {
     let book: Book
     @Binding var selectedBookID: UUID?
@@ -146,6 +139,9 @@ struct BookView: View {
                     .font(.largeTitle)
             }
             .disabled(currentPage == 0)
+
+            Spacer()
+
             Button {
                 lockedIn.toggle()
             } label: {
@@ -181,7 +177,7 @@ struct BookView: View {
     }
 
     private func loadPDF() {
-        if let url = Bundle.main.url(forResource: "algorithms", withExtension: "pdf") {
+        if let url = Bundle.main.url(forResource: book.fileName, withExtension: "pdf") {
             pdfDocument = PDFDocument(url: url)
         }
     }
@@ -286,7 +282,7 @@ struct SummaryScreen: View {
                 }
             }
 
-            Text("Summary")
+            Text("Page Summary")
                 .font(.largeTitle)
                 .padding()
 
@@ -309,6 +305,7 @@ struct SummaryScreen: View {
         book: Book(
             id: UUID(),
             title: "Sample Book",
+            fileName: "chem",
             author: "John Doe",
             coverImageUrl: URL(string: "https://example.com/cover.jpg"),
             pdfUrl: Bundle.main.url(forResource: "algorithms", withExtension: "pdf")!,

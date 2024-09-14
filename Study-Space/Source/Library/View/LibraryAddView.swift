@@ -13,6 +13,7 @@ struct LibraryAddView: View {
     @ObservedObject var viewModel: LibraryViewModel
     @State private var title = ""
     @State private var author = ""
+    @State private var fileName = ""
     @State private var coverImageUrl = ""
     @State private var pdfFileURL: URL?
     @State private var showingFilePicker = false
@@ -39,6 +40,7 @@ struct LibraryAddView: View {
                     if let url = pdfFileURL {
                         let newBook = Book(
                             title: title,
+                            fileName: fileName,
                             author: author,
                             coverImageUrl: URL(string: coverImageUrl),
                             pdfUrl: url
