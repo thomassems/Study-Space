@@ -13,7 +13,11 @@ struct Study_SpaceApp: App {
         WindowGroup {
             ContentView()
         }
-
+        
+        WindowGroup(id: "Summary") {
+            SummaryScreen()
+        }
+    
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
         }.immersionStyle(selection: .constant(.full), in: .full)
