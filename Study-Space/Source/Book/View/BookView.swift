@@ -20,7 +20,6 @@ struct BookView: View {
     @Binding var selectedBookID: UUID?
     @State private var pdfDocument: PDFDocument?
     @State private var currentPage: Int = 0
-    @State private var query: String = ""
     @State private var lockedIn = false
     
     @State private var immersiveSpaceIsShown: Bool = false
@@ -113,36 +112,7 @@ struct BookView: View {
     }
     
     var chatbot: some View {
-        VStack {
-            // Chat content
-            
-            Spacer()
-            
-            HStack {
-                HStack {
-                    TextField("Ask a question...", text: $query)
-                    
-                    Button {
-                        /// Activate cohere
-                    } label: {
-                        Image(systemName: "paperplane")
-                    }
-                }
-                .padding()
-                .background(
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(Color(.systemGray5))
-                )
-                
-                Button {
-                    /// Activate voiceflow
-                } label: {
-                    Image(systemName: "mic")
-                }
-            }
-            .padding(.horizontal)
-            .padding(.top)
-        }
+        ChatbotView()
     }
     
     var footerInfo: some View {

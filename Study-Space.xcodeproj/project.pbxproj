@@ -22,6 +22,9 @@
 		BDC80E942C9630AC00DF39BF /* math.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BDC80E912C9630AB00DF39BF /* math.pdf */; };
 		BDC80E952C9630AC00DF39BF /* chem.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BDC80E922C9630AB00DF39BF /* chem.pdf */; };
 		BDC80E962C9630AC00DF39BF /* phys.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BDC80E932C9630AC00DF39BF /* phys.pdf */; };
+		BDC80E982C96419200DF39BF /* ChatbotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC80E972C96419200DF39BF /* ChatbotView.swift */; };
+		BDC80E9A2C9641CA00DF39BF /* ChatbotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC80E992C9641CA00DF39BF /* ChatbotViewModel.swift */; };
+		BDC80E9D2C9641D800DF39BF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BDC80E9C2C9641D800DF39BF /* Alamofire */; };
 		D9A8BC262C958A860059C5BC /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8BC252C958A860059C5BC /* Book.swift */; };
 		D9A8BC282C958AB70059C5BC /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8BC272C958AB70059C5BC /* BookView.swift */; };
 		D9A8BC2A2C958AC20059C5BC /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8BC292C958AC20059C5BC /* BookViewModel.swift */; };
@@ -50,6 +53,8 @@
 		BDC80E912C9630AB00DF39BF /* math.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = math.pdf; sourceTree = "<group>"; };
 		BDC80E922C9630AB00DF39BF /* chem.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = chem.pdf; sourceTree = "<group>"; };
 		BDC80E932C9630AC00DF39BF /* phys.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = phys.pdf; sourceTree = "<group>"; };
+		BDC80E972C96419200DF39BF /* ChatbotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotView.swift; sourceTree = "<group>"; };
+		BDC80E992C9641CA00DF39BF /* ChatbotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotViewModel.swift; sourceTree = "<group>"; };
 		D9A8BC252C958A860059C5BC /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D9A8BC272C958AB70059C5BC /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		D9A8BC292C958AC20059C5BC /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
@@ -66,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD664DB32C956AF0001C15FE /* RealityKitContent in Frameworks */,
+				BDC80E9D2C9641D800DF39BF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +217,7 @@
 				BD8DDB032C95C993006841EB /* PDFPageView.swift */,
 				BDC80E8D2C961D8F00DF39BF /* PolynomialGraphView.swift */,
 				BDC80E8F2C96217100DF39BF /* Polynomial3DGraphView.swift */,
+				BDC80E972C96419200DF39BF /* ChatbotView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -219,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				D9A8BC292C958AC20059C5BC /* BookViewModel.swift */,
+				BDC80E992C9641CA00DF39BF /* ChatbotViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 			name = "Study-Space";
 			packageProductDependencies = (
 				BD664DB22C956AF0001C15FE /* RealityKitContent */,
+				BDC80E9C2C9641D800DF39BF /* Alamofire */,
 			);
 			productName = "Study-Space";
 			productReference = BD664DAD2C956AF0001C15FE /* Study-Space.app */;
@@ -270,6 +279,9 @@
 				Base,
 			);
 			mainGroup = BD664DA42C956AF0001C15FE;
+			packageReferences = (
+				BDC80E9B2C9641D800DF39BF /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = BD664DAE2C956AF0001C15FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -304,9 +316,11 @@
 			files = (
 				D9A8BC262C958A860059C5BC /* Book.swift in Sources */,
 				D9A8BC362C9591B60059C5BC /* LibraryBookView.swift in Sources */,
+				BDC80E9A2C9641CA00DF39BF /* ChatbotViewModel.swift in Sources */,
 				BDC80E902C96217100DF39BF /* Polynomial3DGraphView.swift in Sources */,
 				D9A8BC2C2C958AE20059C5BC /* Library.swift in Sources */,
 				BD664DB72C956AF0001C15FE /* ContentView.swift in Sources */,
+				BDC80E982C96419200DF39BF /* ChatbotView.swift in Sources */,
 				BD664DB52C956AF0001C15FE /* Study_SpaceApp.swift in Sources */,
 				D9A8BC382C9592710059C5BC /* LibraryAddView.swift in Sources */,
 				BD8DDB042C95C993006841EB /* PDFPageView.swift in Sources */,
@@ -516,10 +530,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		BDC80E9B2C9641D800DF39BF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		BD664DB22C956AF0001C15FE /* RealityKitContent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RealityKitContent;
+		};
+		BDC80E9C2C9641D800DF39BF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDC80E9B2C9641D800DF39BF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
