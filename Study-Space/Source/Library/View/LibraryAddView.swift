@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct LibraryAddView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -13,7 +14,8 @@ struct LibraryAddView: View {
     @State private var title = ""
     @State private var author = ""
     @State private var coverImageUrl = ""
-    @State private var pdfUrl = ""
+    @State private var pdfFileURL: URL?
+    @State private var showingFilePicker = false
     
     var body: some View {
         NavigationView {
@@ -21,13 +23,20 @@ struct LibraryAddView: View {
                 TextField("Title", text: $title)
                 TextField("Author", text: $author)
                 TextField("Cover Image URL", text: $coverImageUrl)
-                TextField("PDF URL", text: $pdfUrl)
+                
+                Button("Select PDF File") {
+                    showingFilePicker = true
+                }
+                
+                if let url = pdfFileURL {
+                    Text("Selected file: \(url.lastPathComponent)")
+                }
             }
             .navigationTitle("Add Book")
             .navigationBarItems(
                 leading: Button("Cancel") { presentationMode.wrappedValue.dismiss() },
                 trailing: Button("Save") {
-                    if let url = URL(string: pdfUrl) {
+                    if let url = pdfFileURL {
                         let newBook = Book(
                             title: title,
                             author: author,
@@ -38,8 +47,20 @@ struct LibraryAddView: View {
                         presentationMode.wrappedValue.dismiss()
                     }
                 }
-                .disabled(title.isEmpty || author.isEmpty || pdfUrl.isEmpty)
+                    .disabled(title.isEmpty || author.isEmpty || pdfFileURL == nil)
             )
+        }
+        .fileImporter(
+            isPresented: $showingFilePicker,
+            allowedContentTypes: [UTType.pdf],
+            allowsMultipleSelection: false
+        ) { result in
+            do {
+                guard let selectedFile: URL = try result.get().first else { return }
+                pdfFileURL = selectedFile
+            } catch {
+                print("Error selecting file: \(error.localizedDescription)")
+            }
         }
     }
 }
