@@ -61,7 +61,6 @@ struct LibraryView: View {
                 }
             }
         }
-        // FIXME: Sheet disappears when keyboard pops up
         .sheet(isPresented: $showingAddBook) {
             LibraryAddView(viewModel: viewModel)
         }
