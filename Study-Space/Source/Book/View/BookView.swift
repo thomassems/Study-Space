@@ -9,8 +9,12 @@ import Foundation
 import SwiftUI
 import PDFKit
 
-import SwiftUI
-import PDFKit
+struct Polynomial {
+    var coefficients: [Double]
+    
+    static var shared = Polynomial(coefficients: [])
+}
+
 
 struct BookView: View {
     let book: Book
@@ -60,12 +64,12 @@ struct BookView: View {
         GeometryReader { geometry in
             HStack(spacing: 0) {
                 pdfContent
-                    .frame(width: geometry.size.width * 2 / 3) // 2/3 of the total width
+                    .frame(width: geometry.size.width * 1 / 2)
 
                 Divider()
 
                 chatbot
-                    .frame(width: geometry.size.width * 1 / 3) // 1/3 of the total width
+                    .frame(width: geometry.size.width * 1 / 2) 
             }
         }
         .padding(.bottom)
@@ -101,42 +105,21 @@ struct BookView: View {
                     }
                     .padding()
                 }
+                .onTapGesture {
+                    if lockedIn {
+                        /// Render the diagrams and/or 3D models
+                        Polynomial.shared.coefficients = [2, -1, -9, 2]
+                        openWindow(id: "Polynomial")
+//                        openWindow(id: "Polynomial3D")
+                    }
+                }
         } else {
             Text("Loading PDF...")
         }
     }
 
     var chatbot: some View {
-        VStack {
-            // Chat content
-
-            Spacer()
-
-            HStack {
-                HStack {
-                    TextField("Ask a question...", text: $query)
-
-                    Button {
-                        // Handle any chatbot logic here
-                    } label: {
-                        Image(systemName: "paperplane")
-                    }
-                }
-                .padding()
-                .background(
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(Color(.systemGray5))
-                )
-
-                Button {
-                    // Activate voiceflow or another chat API
-                } label: {
-                    Image(systemName: "mic")
-                }
-            }
-            .padding(.horizontal)
-            .padding(.top)
-        }
+        ChatbotView()
     }
 
     var footerInfo: some View {
@@ -163,9 +146,6 @@ struct BookView: View {
                     .font(.largeTitle)
             }
             .disabled(currentPage == 0)
-
-            Spacer()
-
             Button {
                 lockedIn.toggle()
             } label: {
