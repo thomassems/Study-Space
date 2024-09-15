@@ -35,7 +35,7 @@ struct ContentView: View {
                     .frame(width: 100, height: 100)
                     .foregroundColor(.primary)
                 
-                Text("Welcome to Study Space")
+                Text("Welcome to LockedIn")
                     .font(.largeTitle)
                     .fontWeight(.bold)
             }
@@ -46,7 +46,7 @@ struct ContentView: View {
                     opacity = 0
                 }
             }) {
-                Text("Enter Study Space")
+                Text("Get started")
                     .font(.title2)
                     .fontWeight(.semibold)
                     .padding()
