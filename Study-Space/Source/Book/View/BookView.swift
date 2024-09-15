@@ -103,7 +103,11 @@ struct BookView: View {
                 .onTapGesture {
                     if lockedIn {
                         /// Render the diagrams and/or 3D models
-                        openWindow(id: "Polynomial")
+                        if book.fileName == "math" {
+                            openWindow(id: "Polynomial")
+                        } else if book.fileName == "chem" {
+                            openWindow(id: "Molecule3D")
+                        }
                     }
                 }
         } else {
@@ -175,16 +179,16 @@ struct BookView: View {
                 }
             }
             
-            if book.fileName == "chem" {
-                Button {
-                    openWindow(id: "Molecule3D")
-                } label: {
-                    HStack {
-                        Image(systemName: "molecule")
-                        Text("View Molecules")
-                    }
-                }
-            }
+//            if book.fileName == "chem" {
+//                Button {
+//                    openWindow(id: "Molecule3D")
+//                } label: {
+//                    HStack {
+//                        Image(systemName: "molecule")
+//                        Text("View Molecules")
+//                    }
+//                }
+//            }
 
             Spacer()
 
