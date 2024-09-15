@@ -10,8 +10,11 @@ import SwiftUI
 struct LibraryView: View {
     @StateObject private var viewModel = LibraryViewModel()
     @State private var showingAddBook = false
+    @State private var showingShopify = false
     @State private var selectedCategory: BookCategory? = .all
     @State private var selectedBookID: UUID? = nil
+    
+    private let shopifyUrl = URL(string: "https://3f5487-9f.myshopify.com")
 
     enum BookCategory: String, CaseIterable {
         case recents = "Recents"
@@ -69,6 +72,12 @@ struct LibraryView: View {
         .navigationTitle(selectedCategory?.rawValue ?? "Library")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: { showingShopify = true }) {
+                    Image(systemName: "books.vertical")
+                }
+            }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: { showingAddBook = true }) {
                     Image(systemName: "plus")
                 }
@@ -76,6 +85,19 @@ struct LibraryView: View {
         }
         .sheet(isPresented: $showingAddBook) {
             LibraryAddView(viewModel: viewModel)
+        }
+        .sheet(isPresented: $showingShopify) {
+            if let url = shopifyUrl {
+                LibraryWebView(url: url)
+                    .overlay(alignment: .topTrailing) {
+                        Button("Close") {
+                            withAnimation {
+                                showingShopify = false
+                            }
+                        }
+                        .padding()
+                    }
+            }
         }
     }
     
