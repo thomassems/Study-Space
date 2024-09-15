@@ -213,7 +213,7 @@ struct BookView: View {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
         // Add your API key (make sure to store your key securely)
-        let apiKey = "api_key"  // Replace with your actual API key
+        let apiKey = "7bi7FBip53iHoiGVtI2IppPth7GiulzlITiyzXG1"  // Replace with your actual API key
         request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
 
         // Create the request body
@@ -278,8 +278,6 @@ struct Summary {
 
 struct SummaryScreen: View {
     @Environment(\.dismissWindow) var dismissWindow
-
-    
     
     var body: some View {
         VStack {
