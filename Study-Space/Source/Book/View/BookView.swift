@@ -18,6 +18,8 @@ struct BookView: View {
     @State private var showSummaryScreen = false // Toggle to navigate to the summary screen
     @State private var query: String = ""
     @State private var lockedIn = false
+    
+    @StateObject private var vm = BookViewModel()
 
     @State private var immersiveSpaceIsShown: Bool = false
     @Environment(\.openWindow) var openWindow
@@ -110,7 +112,7 @@ struct BookView: View {
     }
 
     var chatbot: some View {
-        ChatbotView()
+        ChatbotView(book: book, currentPage: $currentPage)
     }
 
     var footerInfo: some View {
@@ -141,9 +143,11 @@ struct BookView: View {
             Spacer()
 
             Button {
-                ImmersionState.shared = "observatory" /// fetched by prediction model
-                
-                lockedIn.toggle()
+                Task {
+                    await vm.getBackground(textbook: book.fileName, page: currentPage)
+                    
+                    lockedIn.toggle()
+                }
             } label: {
                 HStack {
                     Image(systemName: "person.and.background.dotted")
@@ -152,6 +156,13 @@ struct BookView: View {
                         Text("Lock in")
                     } else {
                         Text("Lock out")
+                    }
+                }
+            }
+            .onChange(of: currentPage) {
+                Task {
+                    if lockedIn {
+                        await vm.getBackground(textbook: book.fileName, page: currentPage)
                     }
                 }
             }
@@ -164,12 +175,14 @@ struct BookView: View {
                 }
             }
             
-            Button {
-                openWindow(id: "Molecule3D")
-            } label: {
-                HStack {
-                    Image(systemName: "molecule")
-                    Text("View Molecules")
+            if book.fileName == "chem" {
+                Button {
+                    openWindow(id: "Molecule3D")
+                } label: {
+                    HStack {
+                        Image(systemName: "molecule")
+                        Text("View Molecules")
+                    }
                 }
             }
 

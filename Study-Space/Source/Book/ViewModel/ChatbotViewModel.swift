@@ -16,7 +16,7 @@ final class ChatbotViewModel: ObservableObject {
     func respond(query: String, textbook: String, page: Int) async throws {
         let textbookText = extractTextFromPage(pdfFileName: textbook, pdfFileExtension: "pdf", pageNumber: page)
         
-        let url = "http://127.0.0.1:8000" + "/respond"
+        let url = "https://4f2e-2620-101-f000-7c0-00-e16.ngrok-free.app" + "/respond"
         let parameters: Parameters = ["message": query, "textbook_content": textbookText as Any]
         
         self.messages.append(query)

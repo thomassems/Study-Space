@@ -36,6 +36,14 @@ struct ImmersiveView: View {
 
               content.add(entity)
           }
+          .onAppear {
+              // Play ambient music when the immersive view appears
+              AudioManager.shared.playAmbientMusic(named: "midnight-forest", withExtension: "mp3")
+          }
+          .onDisappear {
+              // Stop music when immersive view disappears
+              AudioManager.shared.stopMusic()
+          }
     }
 }
 

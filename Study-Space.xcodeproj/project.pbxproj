@@ -35,6 +35,9 @@
 		BDC80E982C96419200DF39BF /* ChatbotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC80E972C96419200DF39BF /* ChatbotView.swift */; };
 		BDC80E9A2C9641CA00DF39BF /* ChatbotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC80E992C9641CA00DF39BF /* ChatbotViewModel.swift */; };
 		BDC80E9D2C9641D800DF39BF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BDC80E9C2C9641D800DF39BF /* Alamofire */; };
+		BDF44D752C96B31F000768A8 /* labratory.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDF44D742C96B31F000768A8 /* labratory.jpg */; };
+		BDF44D782C96B448000768A8 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF44D772C96B448000768A8 /* AudioManager.swift */; };
+		BDF44D7A2C96B4FE000768A8 /* midnight-forest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDF44D792C96B4FE000768A8 /* midnight-forest.mp3 */; };
 		D9082ADA2C9655F400E3D21E /* Polynomial.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9082AD92C9655F400E3D21E /* Polynomial.swift */; };
 		D9082ADD2C966E3300E3D21E /* Molecule3DView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9082ADC2C966E3300E3D21E /* Molecule3DView.swift */; };
 		D9429AF72C9688DA001EC112 /* LibraryWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9429AF62C9688DA001EC112 /* LibraryWebView.swift */; };
@@ -50,7 +53,6 @@
 
 /* Begin PBXFileReference section */
 		BD0673B22C967DC40043B222 /* classroom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = classroom.jpg; sourceTree = "<group>"; };
-		BD0673B32C967DC40043B222 /* labratory.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = labratory.jpg; sourceTree = "<group>"; };
 		BD0673B82C967EB90043B222 /* lecture hall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lecture hall.jpg"; sourceTree = "<group>"; };
 		BD0673BC2C967FFD0043B222 /* library.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = library.jpg; sourceTree = "<group>"; };
 		BD0673C22C9681D20043B222 /* office.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = office.jpg; sourceTree = "<group>"; };
@@ -79,6 +81,9 @@
 		BDC80E932C9630AC00DF39BF /* phys.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = phys.pdf; sourceTree = "<group>"; };
 		BDC80E972C96419200DF39BF /* ChatbotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotView.swift; sourceTree = "<group>"; };
 		BDC80E992C9641CA00DF39BF /* ChatbotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotViewModel.swift; sourceTree = "<group>"; };
+		BDF44D742C96B31F000768A8 /* labratory.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = labratory.jpg; sourceTree = "<group>"; };
+		BDF44D772C96B448000768A8 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		BDF44D792C96B4FE000768A8 /* midnight-forest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "midnight-forest.mp3"; sourceTree = "<group>"; };
 		D9082AD92C9655F400E3D21E /* Polynomial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polynomial.swift; sourceTree = "<group>"; };
 		D9082ADC2C966E3300E3D21E /* Molecule3DView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Molecule3DView.swift; sourceTree = "<group>"; };
 		D9429AF62C9688DA001EC112 /* LibraryWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryWebView.swift; sourceTree = "<group>"; };
@@ -169,13 +174,13 @@
 			isa = PBXGroup;
 			children = (
 				BD0673B22C967DC40043B222 /* classroom.jpg */,
-				BD0673B32C967DC40043B222 /* labratory.jpg */,
 				BD0673BC2C967FFD0043B222 /* library.jpg */,
 				BD0673C22C9681D20043B222 /* office.jpg */,
 				BD0673B82C967EB90043B222 /* lecture hall.jpg */,
 				BD0673D12C9684B60043B222 /* observatory.jpg */,
 				BD0673D42C96853A0043B222 /* greenhouse.jpg */,
 				BD0673C62C9682890043B222 /* study room.jpg */,
+				BDF44D742C96B31F000768A8 /* labratory.jpg */,
 				BD0673C82C9682ED0043B222 /* workshop.jpg */,
 				BD0673CA2C96833A0043B222 /* field.jpg */,
 				BD278D352C9691CB00D37ADC /* chem_cvr.png */,
@@ -183,6 +188,15 @@
 				BD278D362C9691CB00D37ADC /* phys_cvr.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BDF44D762C96B43E000768A8 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				BDF44D792C96B4FE000768A8 /* midnight-forest.mp3 */,
+				BDF44D772C96B448000768A8 /* AudioManager.swift */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		D9082AD72C9655B100E3D21E /* Math */ = {
@@ -213,6 +227,7 @@
 		D9A8BC1C2C958A270059C5BC /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				BDF44D762C96B43E000768A8 /* Audio */,
 				D9082AD72C9655B100E3D21E /* Math */,
 				D9A8BC1E2C958A360059C5BC /* Book */,
 				D9A8BC1D2C958A300059C5BC /* Library */,
@@ -362,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD664DBD2C956AF1001C15FE /* Assets.xcassets in Resources */,
+				BDF44D7A2C96B4FE000768A8 /* midnight-forest.mp3 in Resources */,
 				BD0673C72C96828A0043B222 /* study room.jpg in Resources */,
 				BD0673D32C9684B60043B222 /* observatory.jpg in Resources */,
 				BD0673C92C9682ED0043B222 /* workshop.jpg in Resources */,
@@ -372,6 +388,7 @@
 				BD278D3A2C9691CB00D37ADC /* math_cvr.png in Resources */,
 				BD0673BD2C967FFD0043B222 /* library.jpg in Resources */,
 				BD0673CB2C96833A0043B222 /* field.jpg in Resources */,
+				BDF44D752C96B31F000768A8 /* labratory.jpg in Resources */,
 				BDC80E942C9630AC00DF39BF /* math.pdf in Resources */,
 				BDC80E952C9630AC00DF39BF /* chem.pdf in Resources */,
 				BDC80E962C9630AC00DF39BF /* phys.pdf in Resources */,
@@ -407,6 +424,7 @@
 				BDC80E8E2C961D8F00DF39BF /* PolynomialGraphView.swift in Sources */,
 				D9A8BC282C958AB70059C5BC /* BookView.swift in Sources */,
 				D9A8BC302C958B0A0059C5BC /* LibraryViewModel.swift in Sources */,
+				BDF44D782C96B448000768A8 /* AudioManager.swift in Sources */,
 				D9A8BC2A2C958AC20059C5BC /* BookViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

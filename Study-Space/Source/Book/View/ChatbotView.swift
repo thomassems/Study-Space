@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ChatbotView: View {
+    var book: Book
+    @Binding var currentPage: Int
+    
     @State private var query: String = ""
     @State private var loading = false
     
@@ -76,12 +79,6 @@ struct ChatbotView: View {
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color(.systemGray5))
                 )
-                
-                Button {
-                    /// Activate voiceflow
-                } label: {
-                    Image(systemName: "mic")
-                }
             }
             .padding(.horizontal)
             .padding(.top)
@@ -91,7 +88,7 @@ struct ChatbotView: View {
     func respond() async {
         loading = true
         do {
-            try await vm.respond(query: query, textbook: "phys", page: 10)
+            try await vm.respond(query: query, textbook: book.fileName, page: currentPage)
             query = ""
         } catch {
             print("Error: \(error)")
@@ -100,6 +97,3 @@ struct ChatbotView: View {
     }
 }
 
-#Preview {
-    ChatbotView()
-}
