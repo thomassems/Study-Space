@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD0673B52C967DC40043B222 /* classroom.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0673B22C967DC40043B222 /* classroom.jpg */; };
+		BD0673B62C967DC40043B222 /* labratory.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0673B32C967DC40043B222 /* labratory.jpg */; };
+		BD0673B92C967EB90043B222 /* lecture hall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0673B82C967EB90043B222 /* lecture hall.jpg */; };
+		BD0673BD2C967FFD0043B222 /* library.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0673BC2C967FFD0043B222 /* library.jpg */; };
+		BD0673C32C9681D20043B222 /* office.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0673C22C9681D20043B222 /* office.jpg */; };
+		BD0673C72C96828A0043B222 /* study room.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0673C62C9682890043B222 /* study room.jpg */; };
+		BD0673C92C9682ED0043B222 /* workshop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0673C82C9682ED0043B222 /* workshop.jpg */; };
+		BD0673CB2C96833A0043B222 /* field.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0673CA2C96833A0043B222 /* field.jpg */; };
+		BD0673D32C9684B60043B222 /* observatory.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0673D12C9684B60043B222 /* observatory.jpg */; };
+		BD0673D52C96853B0043B222 /* greenhouse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD0673D42C96853A0043B222 /* greenhouse.jpg */; };
 		BD664DB32C956AF0001C15FE /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = BD664DB22C956AF0001C15FE /* RealityKitContent */; };
 		BD664DB52C956AF0001C15FE /* Study_SpaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD664DB42C956AF0001C15FE /* Study_SpaceApp.swift */; };
 		BD664DB72C956AF0001C15FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD664DB62C956AF0001C15FE /* ContentView.swift */; };
@@ -16,7 +26,6 @@
 		BD664DC02C956AF1001C15FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD664DBF2C956AF1001C15FE /* Preview Assets.xcassets */; };
 		BD8DDB022C95C922006841EB /* algorithms.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BD8DDB012C95C922006841EB /* algorithms.pdf */; };
 		BD8DDB042C95C993006841EB /* PDFPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DDB032C95C993006841EB /* PDFPageView.swift */; };
-		BD8DDB072C95D58E006841EB /* room.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD8DDB062C95D58E006841EB /* room.jpg */; };
 		BDC80E8E2C961D8F00DF39BF /* PolynomialGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC80E8D2C961D8F00DF39BF /* PolynomialGraphView.swift */; };
 		BDC80E902C96217100DF39BF /* Polynomial3DGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC80E8F2C96217100DF39BF /* Polynomial3DGraphView.swift */; };
 		BDC80E942C9630AC00DF39BF /* math.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BDC80E912C9630AB00DF39BF /* math.pdf */; };
@@ -37,6 +46,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD0673B22C967DC40043B222 /* classroom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = classroom.jpg; sourceTree = "<group>"; };
+		BD0673B32C967DC40043B222 /* labratory.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = labratory.jpg; sourceTree = "<group>"; };
+		BD0673B82C967EB90043B222 /* lecture hall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lecture hall.jpg"; sourceTree = "<group>"; };
+		BD0673BC2C967FFD0043B222 /* library.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = library.jpg; sourceTree = "<group>"; };
+		BD0673C22C9681D20043B222 /* office.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = office.jpg; sourceTree = "<group>"; };
+		BD0673C62C9682890043B222 /* study room.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "study room.jpg"; sourceTree = "<group>"; };
+		BD0673C82C9682ED0043B222 /* workshop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = workshop.jpg; sourceTree = "<group>"; };
+		BD0673CA2C96833A0043B222 /* field.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = field.jpg; sourceTree = "<group>"; };
+		BD0673D12C9684B60043B222 /* observatory.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = observatory.jpg; sourceTree = "<group>"; };
+		BD0673D42C96853A0043B222 /* greenhouse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = greenhouse.jpg; sourceTree = "<group>"; };
 		BD664DAD2C956AF0001C15FE /* Study-Space.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study-Space.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD664DB12C956AF0001C15FE /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		BD664DB42C956AF0001C15FE /* Study_SpaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_SpaceApp.swift; sourceTree = "<group>"; };
@@ -48,7 +67,6 @@
 		BD664DC12C956AF1001C15FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD8DDB012C95C922006841EB /* algorithms.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = algorithms.pdf; sourceTree = "<group>"; };
 		BD8DDB032C95C993006841EB /* PDFPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFPageView.swift; sourceTree = "<group>"; };
-		BD8DDB062C95D58E006841EB /* room.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = room.jpg; sourceTree = "<group>"; };
 		BDC80E8D2C961D8F00DF39BF /* PolynomialGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolynomialGraphView.swift; sourceTree = "<group>"; };
 		BDC80E8F2C96217100DF39BF /* Polynomial3DGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polynomial3DGraphView.swift; sourceTree = "<group>"; };
 		BDC80E912C9630AB00DF39BF /* math.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = math.pdf; sourceTree = "<group>"; };
@@ -144,7 +162,16 @@
 		BD8DDB052C95D581006841EB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BD8DDB062C95D58E006841EB /* room.jpg */,
+				BD0673B22C967DC40043B222 /* classroom.jpg */,
+				BD0673B32C967DC40043B222 /* labratory.jpg */,
+				BD0673BC2C967FFD0043B222 /* library.jpg */,
+				BD0673C22C9681D20043B222 /* office.jpg */,
+				BD0673B82C967EB90043B222 /* lecture hall.jpg */,
+				BD0673D12C9684B60043B222 /* observatory.jpg */,
+				BD0673D42C96853A0043B222 /* greenhouse.jpg */,
+				BD0673C62C9682890043B222 /* study room.jpg */,
+				BD0673C82C9682ED0043B222 /* workshop.jpg */,
+				BD0673CA2C96833A0043B222 /* field.jpg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -316,13 +343,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD664DBD2C956AF1001C15FE /* Assets.xcassets in Resources */,
-				BD8DDB072C95D58E006841EB /* room.jpg in Resources */,
+				BD0673C72C96828A0043B222 /* study room.jpg in Resources */,
+				BD0673D32C9684B60043B222 /* observatory.jpg in Resources */,
+				BD0673C92C9682ED0043B222 /* workshop.jpg in Resources */,
+				BD0673D52C96853B0043B222 /* greenhouse.jpg in Resources */,
+				BD0673C32C9681D20043B222 /* office.jpg in Resources */,
+				BD0673B92C967EB90043B222 /* lecture hall.jpg in Resources */,
+				BD0673BD2C967FFD0043B222 /* library.jpg in Resources */,
+				BD0673CB2C96833A0043B222 /* field.jpg in Resources */,
 				BDC80E942C9630AC00DF39BF /* math.pdf in Resources */,
 				BDC80E952C9630AC00DF39BF /* chem.pdf in Resources */,
 				BDC80E962C9630AC00DF39BF /* phys.pdf in Resources */,
 				BD664DC02C956AF1001C15FE /* Preview Assets.xcassets in Resources */,
+				BD0673B62C967DC40043B222 /* labratory.jpg in Resources */,
 				BD8DDB022C95C922006841EB /* algorithms.pdf in Resources */,
 				BD664DBB2C956AF0001C15FE /* ImageBasedLighting.skybox in Resources */,
+				BD0673B52C967DC40043B222 /* classroom.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
