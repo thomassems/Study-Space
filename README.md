@@ -1,4 +1,11 @@
-# Study-Space
+# LockedIn (aka Study-Space)
 
-Study-Space is a VisionOS app developed for Hack The North 2024.
+LockedIn is a visionOS app for the Apple Vision Pro, built at Hack The North 2024.
+
+# Authors
+
+Thomas Semczyszyn (University of Toronto)
+Nick Pestov (University of Toronto)
+Jared Drueco (University of Alberta)
+Mingchung Xia (University of Waterloo)
 
