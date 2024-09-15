@@ -10,7 +10,7 @@ import RealityKit
 import RealityKitContent
 
 struct ImmersionState {
-    static var shared = "room" /// this is a global variable to store the current immersive state
+    static var shared = "" /// this is a global variable to store the current immersive state
 }
 
 struct ImmersiveView: View {

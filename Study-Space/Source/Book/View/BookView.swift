@@ -101,9 +101,7 @@ struct BookView: View {
                 .onTapGesture {
                     if lockedIn {
                         /// Render the diagrams and/or 3D models
-                        Polynomial.shared.coefficients = [2, -1, -9, 2]
                         openWindow(id: "Polynomial")
-//                        openWindow(id: "Polynomial3D")
                     }
                 }
         } else {
@@ -123,7 +121,7 @@ struct BookView: View {
 
                 Spacer()
 
-                Text("Algorithms by Author1, Author2...")
+                Text("Algorithms by \(book.author)")
                     .font(.caption2)
             }
             .padding(.horizontal)
@@ -143,6 +141,8 @@ struct BookView: View {
             Spacer()
 
             Button {
+                ImmersionState.shared = "observatory" /// fetched by prediction model
+                
                 lockedIn.toggle()
             } label: {
                 HStack {

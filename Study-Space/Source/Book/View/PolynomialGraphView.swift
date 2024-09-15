@@ -77,6 +77,7 @@ struct PolynomialGraphView: View {
                 Spacer()
                 Button("Close") {
                     dismissWindow()
+                    Polynomial.nextShared()
                 }
                 .padding()
             }
