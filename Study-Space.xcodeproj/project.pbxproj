@@ -41,6 +41,7 @@
 		D9082ADA2C9655F400E3D21E /* Polynomial.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9082AD92C9655F400E3D21E /* Polynomial.swift */; };
 		D9082ADD2C966E3300E3D21E /* Molecule3DView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9082ADC2C966E3300E3D21E /* Molecule3DView.swift */; };
 		D9429AF72C9688DA001EC112 /* LibraryWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9429AF62C9688DA001EC112 /* LibraryWebView.swift */; };
+		D971A0882C96A91F000C3F3F /* BookMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = D971A0872C96A91F000C3F3F /* BookMetadata.swift */; };
 		D9A8BC262C958A860059C5BC /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8BC252C958A860059C5BC /* Book.swift */; };
 		D9A8BC282C958AB70059C5BC /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8BC272C958AB70059C5BC /* BookView.swift */; };
 		D9A8BC2A2C958AC20059C5BC /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8BC292C958AC20059C5BC /* BookViewModel.swift */; };
@@ -87,6 +88,7 @@
 		D9082AD92C9655F400E3D21E /* Polynomial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polynomial.swift; sourceTree = "<group>"; };
 		D9082ADC2C966E3300E3D21E /* Molecule3DView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Molecule3DView.swift; sourceTree = "<group>"; };
 		D9429AF62C9688DA001EC112 /* LibraryWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryWebView.swift; sourceTree = "<group>"; };
+		D971A0872C96A91F000C3F3F /* BookMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMetadata.swift; sourceTree = "<group>"; };
 		D9A8BC252C958A860059C5BC /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D9A8BC272C958AB70059C5BC /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		D9A8BC292C958AC20059C5BC /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				D9A8BC2B2C958AE20059C5BC /* Library.swift */,
+				D971A0872C96A91F000C3F3F /* BookMetadata.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				BD8DDB042C95C993006841EB /* PDFPageView.swift in Sources */,
 				D9082ADA2C9655F400E3D21E /* Polynomial.swift in Sources */,
 				D9A8BC2E2C958AF40059C5BC /* LibraryView.swift in Sources */,
+				D971A0882C96A91F000C3F3F /* BookMetadata.swift in Sources */,
 				BD664DB92C956AF0001C15FE /* ImmersiveView.swift in Sources */,
 				D9082ADD2C966E3300E3D21E /* Molecule3DView.swift in Sources */,
 				BDC80E8E2C961D8F00DF39BF /* PolynomialGraphView.swift in Sources */,

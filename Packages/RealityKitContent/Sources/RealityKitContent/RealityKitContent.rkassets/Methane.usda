@@ -8,6 +8,9 @@
 def Xform "Root"
 {
     reorder nameChildren = ["Red_PU_Leather", "DefaultMaterial", "Sphere_5", "Cylinder_4", "_0E40CC7F_D2A5_43BF_A980_ED53E98C2B22", "GridMaterial"]
+    float3 xformOp:translate = (0, 0, 0.9664828)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
     def "GridMaterial" (
         active = true
         references = @Materials/GridMaterial.usda@
@@ -50,7 +53,7 @@ def Xform "Root"
         active = true
     )
     {
-        float3 xformOp:translate = (0, 0, 0)
+        float3 xformOp:translate = (0, 0, -9.791651)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Sphere "Sphere_1" (

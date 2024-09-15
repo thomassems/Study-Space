@@ -23,7 +23,7 @@ def Xform "Root"
         double radius = 0.4
         quatf xformOp:orient = (1, 0, 0, 0)
         float3 xformOp:scale = (0.3, 0.3, 0.3)
-        float3 xformOp:translate = (-0.47959548, 0.019728526, 1.648441e-7)
+        float3 xformOp:translate = (-0.47959548, 0.019728526, -10)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
@@ -53,7 +53,7 @@ def Xform "Root"
         double radius = 0.4
         quatf xformOp:orient = (1, 0, 0, 0)
         float3 xformOp:scale = (0.3, 0.3, 0.3)
-        float3 xformOp:translate = (-0.007886931, 0.019728526, 1.648441e-7)
+        float3 xformOp:translate = (-0.007886931, 0.019728526, -10)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
@@ -88,7 +88,7 @@ def Xform "Root"
         double radius = 0.05
         quatf xformOp:orient = (0.7074075, 0, 0, 0.7068059)
         float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (-0.24469896, 0.018817574, 0)
+        float3 xformOp:translate = (-0.24469896, 0.018817574, -10)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
@@ -114,7 +114,7 @@ def Xform "Root"
         double radius = 0.4
         quatf xformOp:orient = (1, 0, 0, 0)
         float3 xformOp:scale = (0.3, 0.3, 0.3)
-        float3 xformOp:translate = (0.45996076, 0.019728526, 1.648441e-7)
+        float3 xformOp:translate = (0.45996076, 0.019728526, -10)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
@@ -149,7 +149,7 @@ def Xform "Root"
         double radius = 0.05
         quatf xformOp:orient = (0.7074075, 0, 0, 0.70680594)
         float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (0.21053782, 0.018430226, 0)
+        float3 xformOp:translate = (0.21053782, 0.018430226, -10)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
