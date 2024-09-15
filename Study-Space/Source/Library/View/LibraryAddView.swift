@@ -17,7 +17,8 @@ struct LibraryAddView: View {
     @State private var coverImageName = ""
     @State private var pdfFileURL: URL?
     @State private var showingFilePicker = false
-    
+    @State private var showingMASVPicker = false
+
     var body: some View {
         NavigationView {
             Form {
@@ -29,6 +30,10 @@ struct LibraryAddView: View {
                     showingFilePicker = true
                 }
                 
+                Button("Or use MASV to upload PDF") {
+                    showingMASVPicker = true
+                }
+
                 if let url = pdfFileURL {
                     Text("Selected file: \(url.lastPathComponent)")
                 }
@@ -64,5 +69,16 @@ struct LibraryAddView: View {
                 print("Error selecting file: \(error.localizedDescription)")
             }
         }
+        .sheet(isPresented: $showingMASVPicker, content: {
+     
+            LibraryWebView(url: URL(string: "https://nicksteamportal8010193108.portal.massive.io/")!)
+                .overlay(alignment: .topTrailing) {
+                    
+                    Button("Close") {
+                        showingMASVPicker = false
+                    }
+                    .padding()
+                }
+        })
     }
 }
