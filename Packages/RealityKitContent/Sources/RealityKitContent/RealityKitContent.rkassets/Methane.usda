@@ -7,7 +7,7 @@
 
 def Xform "Root"
 {
-    reorder nameChildren = ["Red_PU_Leather", "DefaultMaterial", "GridMaterial", "Sphere_1", "Sphere_2", "Sphere_3", "Cylinder", "Cylinder_1", "Sphere_4", "Cylinder_2", "Cylinder_3"]
+    reorder nameChildren = ["Red_PU_Leather", "DefaultMaterial", "Sphere_5", "Cylinder_4", "_0E40CC7F_D2A5_43BF_A980_ED53E98C2B22", "GridMaterial"]
     def "GridMaterial" (
         active = true
         references = @Materials/GridMaterial.usda@
@@ -16,158 +16,6 @@ def Xform "Root"
         float3 xformOp:scale = (1, 1, 1)
         float3 xformOp:translate = (0.07714903, -0.09732268, 0.0061215907)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
-
-    def Sphere "Sphere_1" (
-        active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </Root/Sphere_1/DefaultMaterial>
-        double radius = 0.3
-        quatf xformOp:orient = (1, 0, 0, 0)
-        float3 xformOp:scale = (0.3, 0.3, 0.3)
-        float3 xformOp:translate = (0.07299648, 0.018405266, 0.0061217546)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Material "DefaultMaterial"
-        {
-            token outputs:mtlx:surface
-            token outputs:realitykit:vertex
-            prepend token outputs:surface.connect = </Root/Sphere_1/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
-
-            def Shader "DefaultSurfaceShader"
-            {
-                uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (0.12984204, 0.12984613, 0.12984395) (
-                    colorSpace = "srgb_texture"
-                )
-                float inputs:roughness = 0.75
-                token outputs:surface
-            }
-        }
-    }
-
-    def Sphere "Sphere_2" (
-        active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </Root/Sphere_2/DefaultMaterial>
-        double radius = 0.3
-        quatf xformOp:orient = (1, 0, 0, 0)
-        float3 xformOp:scale = (0.3, 0.3, 0.3)
-        float3 xformOp:translate = (-0.23255551, -0.16391444, 0.0061216876)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Material "DefaultMaterial"
-        {
-            token outputs:mtlx:surface
-            token outputs:realitykit:vertex
-            prepend token outputs:surface.connect = </Root/Sphere_2/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
-
-            def Shader "DefaultSurfaceShader"
-            {
-                uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (0.47684187, 0.5048076, 1) (
-                    colorSpace = "srgb_texture"
-                )
-                float inputs:roughness = 0.75
-                token outputs:surface
-            }
-        }
-    }
-
-    def Sphere "Sphere_3" (
-        active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </Root/Sphere_3/DefaultMaterial>
-        double radius = 0.3
-        quatf xformOp:orient = (1, 0, 0, 0)
-        float3 xformOp:scale = (0.3, 0.3, 0.3)
-        float3 xformOp:translate = (0.3987531, -0.16731244, 0.006121766)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Material "DefaultMaterial"
-        {
-            token outputs:mtlx:surface
-            token outputs:realitykit:vertex
-            token outputs:surface.connect = </Root/Sphere_3/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
-
-            def Shader "DefaultSurfaceShader"
-            {
-                uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (0.47684187, 0.5048076, 1) (
-                    colorSpace = "srgb_texture"
-                )
-                float inputs:roughness = 0.75
-                token outputs:surface
-            }
-        }
-    }
-
-    def Cylinder "Cylinder" (
-        active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
-        customData = {
-            float3 rotationEulerHint = (2.0106934e-7, 1.1119528e-7, -0.9827371)
-        }
-    )
-    {
-        uniform token axis = "Y"
-        double height = 1
-        rel material:binding = </Root/Cylinder/DefaultMaterial>
-        double radius = 0.1
-        quatf xformOp:orient = (0.88168794, 1.14873004e-7, 1.584195e-9, -0.47183296)
-        float3 xformOp:scale = (0.3, 0.3, 0.3)
-        float3 xformOp:translate = (-0.11606166, -0.086015396, 0.0061216056)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Material "DefaultMaterial"
-        {
-            prepend token outputs:surface.connect = </Root/Cylinder/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
-
-            def Shader "DefaultSurfaceShader"
-            {
-                uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (1, 1, 1)
-                float inputs:roughness = 0.75
-                token outputs:surface
-            }
-        }
-    }
-
-    def Cylinder "Cylinder_1" (
-        active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
-        customData = {
-            float3 rotationEulerHint = (-1.9937902e-7, 1.0753879e-7, 0.98128694)
-        }
-    )
-    {
-        uniform token axis = "Y"
-        double height = 1
-        rel material:binding = </Root/Cylinder_1/DefaultMaterial>
-        double radius = 0.1
-        quatf xformOp:orient = (0.88202983, -1.1326492e-7, 4.5315307e-10, 0.47119355)
-        float3 xformOp:scale = (0.3, 0.3, 0.3)
-        float3 xformOp:translate = (0.24850768, -0.074790046, 0.0061217025)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Material "DefaultMaterial"
-        {
-            prepend token outputs:surface.connect = </Root/Cylinder_1/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
-
-            def Shader "DefaultSurfaceShader"
-            {
-                uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (1, 1, 1)
-                float inputs:roughness = 0.75
-                token outputs:surface
-            }
-        }
     }
 
     def "Red_PU_Leather" (
@@ -198,154 +46,314 @@ def Xform "Root"
         }
     }
 
-    def Sphere "Sphere_4" (
+    def Xform "Group" (
         active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
     )
     {
-        rel material:binding = </Root/Sphere_4/DefaultMaterial>
-        double radius = 0.3
-        quatf xformOp:orient = (1, 0, 0, 0)
-        float3 xformOp:scale = (0.3, 0.3, 0.3)
-        float3 xformOp:translate = (0.07266487, 0.21176049, -0.2936202)
+        float3 xformOp:translate = (0, 0, 0)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-        def Material "DefaultMaterial"
+        def Sphere "Sphere_1" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
         {
-            token outputs:mtlx:surface
-            token outputs:realitykit:vertex
-            token outputs:surface.connect = </Root/Sphere_4/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+            rel material:binding = </Root/Group/Sphere_1/DefaultMaterial>
+            double radius = 0.3
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.3, 0.3, 0.3)
+            float3 xformOp:translate = (0.07299648, 0.018405266, 0.0061217546)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-            def Shader "DefaultSurfaceShader"
+            def Material "DefaultMaterial"
             {
-                uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (0.47684187, 0.5048076, 1) (
-                    colorSpace = "srgb_texture"
-                )
-                float inputs:roughness = 0.75
-                token outputs:surface
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+                prepend token outputs:surface.connect = </Root/Group/Sphere_1/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (0.12984204, 0.12984613, 0.12984395) (
+                        colorSpace = "srgb_texture"
+                    )
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
             }
         }
-    }
 
-    def Cylinder "Cylinder_2" (
-        active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
-        customData = {
-            float3 rotationEulerHint = (1.1764847, -0.4049857, 2.4221845)
-        }
-    )
-    {
-        uniform token axis = "Y"
-        double height = 1
-        rel material:binding = </Root/Cylinder_2/DefaultMaterial>
-        double radius = 0.1
-        quatf xformOp:orient = (0.18239471, 0.34793323, 0.44988257, 0.80204755)
-        float3 xformOp:scale = (0.3, 0.3, 0.3)
-        float3 xformOp:translate = (0.072646976, 0.11313512, -0.13647175)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Material "DefaultMaterial"
+        def Sphere "Sphere_2" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
         {
-            token outputs:surface.connect = </Root/Cylinder_2/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+            rel material:binding = </Root/Group/Sphere_2/DefaultMaterial>
+            double radius = 0.3
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.3, 0.3, 0.3)
+            float3 xformOp:translate = (-0.23255551, -0.16391444, 0.0061216876)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-            def Shader "DefaultSurfaceShader"
+            def Material "DefaultMaterial"
             {
-                uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (1, 1, 1)
-                float inputs:roughness = 0.75
-                token outputs:surface
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+                prepend token outputs:surface.connect = </Root/Group/Sphere_2/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (0.47684187, 0.5048076, 1) (
+                        colorSpace = "srgb_texture"
+                    )
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
             }
         }
-    }
 
-    def Cylinder "Cylinder_3" (
-        prepend apiSchemas = ["MaterialBindingAPI"]
-        customData = {
-            float3 rotationEulerHint = (1.1764847, -0.4049857, 2.4221845)
-        }
-    )
-    {
-        uniform token axis = "Y"
-        double height = 1
-        rel material:binding = </Root/Cylinder_3/DefaultMaterial>
-        double radius = 0.1
-        quatf xformOp:orient = (0.18239465, 0.34793317, 0.44988257, 0.80204767)
-        float3 xformOp:scale = (0.3, 0.30000004, 0.29999998)
-        float3 xformOp:translate = (0.072646976, 0.11313512, -0.13647175)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Material "DefaultMaterial"
+        def Sphere "Sphere_3" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
         {
-            token outputs:surface.connect = </Root/Cylinder_3/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+            rel material:binding = </Root/Group/Sphere_3/DefaultMaterial>
+            double radius = 0.3
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.3, 0.3, 0.3)
+            float3 xformOp:translate = (0.3987531, -0.16731244, 0.006121766)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-            def Shader "DefaultSurfaceShader"
+            def Material "DefaultMaterial"
             {
-                uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (1, 1, 1)
-                float inputs:roughness = 0.75
-                token outputs:surface
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+                token outputs:surface.connect = </Root/Group/Sphere_3/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (0.47684187, 0.5048076, 1) (
+                        colorSpace = "srgb_texture"
+                    )
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
             }
         }
-    }
 
-    def Sphere "Sphere_5" (
-        active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
-    )
-    {
-        rel material:binding = </Root/Sphere_5/DefaultMaterial>
-        double radius = 0.3
-        quatf xformOp:orient = (1, 0, 0, 0)
-        float3 xformOp:scale = (0.3, 0.3, 0.3)
-        float3 xformOp:translate = (0.07266487, 0.21988264, 0.33029836)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Material "DefaultMaterial"
+        def Cylinder "Cylinder" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (2.0106934e-7, 1.1119528e-7, -0.9827371)
+            }
+        )
         {
-            token outputs:mtlx:surface
-            token outputs:realitykit:vertex
-            token outputs:surface.connect = </Root/Sphere_5/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+            uniform token axis = "Y"
+            double height = 1
+            rel material:binding = </Root/Group/Cylinder/DefaultMaterial>
+            double radius = 0.1
+            quatf xformOp:orient = (0.88168794, 1.1487305e-7, 1.5841807e-9, -0.47183305)
+            float3 xformOp:scale = (0.3, 0.3, 0.3)
+            float3 xformOp:translate = (-0.11606166, -0.086015396, 0.0061216056)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-            def Shader "DefaultSurfaceShader"
+            def Material "DefaultMaterial"
             {
-                uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (0.47684187, 0.5048076, 1) (
-                    colorSpace = "srgb_texture"
-                )
-                float inputs:roughness = 0.75
-                token outputs:surface
+                prepend token outputs:surface.connect = </Root/Group/Cylinder/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (1, 1, 1)
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
             }
         }
-    }
 
-    def Cylinder "Cylinder_4" (
-        active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
-        customData = {
-            float3 rotationEulerHint = (-1.0286644, -0.0716847, 3.2289574)
-        }
-    )
-    {
-        uniform token axis = "Y"
-        double height = 1
-        rel material:binding = </Root/Cylinder_4/DefaultMaterial>
-        double radius = 0.1
-        quatf xformOp:orient = (-0.020382145, 0.05263776, -0.4898062, 0.8700021)
-        float3 xformOp:scale = (0.3, 0.30000004, 0.29999998)
-        float3 xformOp:translate = (0.07894549, 0.1340946, 0.1947547)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Material "DefaultMaterial"
+        def Cylinder "Cylinder_1" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (-1.9937902e-7, 1.0753879e-7, 0.98128694)
+            }
+        )
         {
-            token outputs:surface.connect = </Root/Cylinder_4/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+            uniform token axis = "Y"
+            double height = 1
+            rel material:binding = </Root/Group/Cylinder_1/DefaultMaterial>
+            double radius = 0.1
+            quatf xformOp:orient = (0.88202983, -1.1326497e-7, 4.5314097e-10, 0.47119364)
+            float3 xformOp:scale = (0.3, 0.3, 0.3)
+            float3 xformOp:translate = (0.24850768, -0.074790046, 0.0061217025)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-            def Shader "DefaultSurfaceShader"
+            def Material "DefaultMaterial"
             {
-                uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (1, 1, 1)
-                float inputs:roughness = 0.75
-                token outputs:surface
+                prepend token outputs:surface.connect = </Root/Group/Cylinder_1/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (1, 1, 1)
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
+            }
+        }
+
+        def Sphere "Sphere_4" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Group/Sphere_4/DefaultMaterial>
+            double radius = 0.3
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.3, 0.3, 0.3)
+            float3 xformOp:translate = (0.07266487, 0.21176049, -0.2936202)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Material "DefaultMaterial"
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+                token outputs:surface.connect = </Root/Group/Sphere_4/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (0.47684187, 0.5048076, 1) (
+                        colorSpace = "srgb_texture"
+                    )
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
+            }
+        }
+
+        def Cylinder "Cylinder_2" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (1.1764847, -0.4049857, 2.4221845)
+            }
+        )
+        {
+            uniform token axis = "Y"
+            double height = 1
+            rel material:binding = </Root/Group/Cylinder_2/DefaultMaterial>
+            double radius = 0.1
+            quatf xformOp:orient = (0.18239465, 0.34793317, 0.44988257, 0.80204767)
+            float3 xformOp:scale = (0.3, 0.30000004, 0.29999998)
+            float3 xformOp:translate = (0.072646976, 0.11313512, -0.13647175)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Material "DefaultMaterial"
+            {
+                token outputs:surface.connect = </Root/Group/Cylinder_2/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (1, 1, 1)
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
+            }
+        }
+
+        def Cylinder "Cylinder_3" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (1.1764847, -0.4049857, 2.4221845)
+            }
+        )
+        {
+            uniform token axis = "Y"
+            double height = 1
+            rel material:binding = </Root/Group/Cylinder_3/DefaultMaterial>
+            double radius = 0.1
+            quatf xformOp:orient = (0.18239462, 0.3479331, 0.4498826, 0.80204767)
+            float3 xformOp:scale = (0.3, 0.3, 0.29999995)
+            float3 xformOp:translate = (0.072646976, 0.11313512, -0.13647175)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Material "DefaultMaterial"
+            {
+                token outputs:surface.connect = </Root/Group/Cylinder_3/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (1, 1, 1)
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
+            }
+        }
+
+        def Sphere "Sphere_5" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/Group/Sphere_5/DefaultMaterial>
+            double radius = 0.3
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (0.3, 0.3, 0.3)
+            float3 xformOp:translate = (0.07266487, 0.21988264, 0.33029836)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Material "DefaultMaterial"
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+                token outputs:surface.connect = </Root/Group/Sphere_5/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (0.47684187, 0.5048076, 1) (
+                        colorSpace = "srgb_texture"
+                    )
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
+            }
+        }
+
+        def Cylinder "Cylinder_4" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (-1.0286644, -0.0716847, 3.2289574)
+            }
+        )
+        {
+            uniform token axis = "Y"
+            double height = 1
+            rel material:binding = </Root/Group/Cylinder_4/DefaultMaterial>
+            double radius = 0.1
+            quatf xformOp:orient = (-0.020382151, 0.052637756, -0.48980618, 0.87000215)
+            float3 xformOp:scale = (0.3, 0.30000004, 0.29999998)
+            float3 xformOp:translate = (0.07894549, 0.1340946, 0.1947547)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Material "DefaultMaterial"
+            {
+                token outputs:surface.connect = </Root/Group/Cylinder_4/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                def Shader "DefaultSurfaceShader"
+                {
+                    uniform token info:id = "UsdPreviewSurface"
+                    color3f inputs:diffuseColor = (1, 1, 1)
+                    float inputs:roughness = 0.75
+                    token outputs:surface
+                }
             }
         }
     }

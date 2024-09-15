@@ -70,7 +70,7 @@ def Xform "Root"
         }
     }
 
-    def Cylinder "Cylinder" (
+    def Cylinder "Cylinder_1" (
         active = true
         prepend apiSchemas = ["MaterialBindingAPI"]
         customData = {
@@ -80,16 +80,16 @@ def Xform "Root"
     {
         uniform token axis = "Y"
         double height = 0.3
-        rel material:binding = </Root/Cylinder/DefaultMaterial>
+        rel material:binding = </Root/Cylinder_1/DefaultMaterial>
         double radius = 0.05
-        quatf xformOp:orient = (0.7074075, 0, 0, 0.7068059)
+        quatf xformOp:orient = (0.7074075, 0, 0, 0.70680594)
         float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (0.000016000122, 0.018817574, 0)
+        float3 xformOp:translate = (0.0070213974, 0.018603347, 0)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
         {
-            prepend token outputs:surface.connect = </Root/Cylinder/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+            token outputs:surface.connect = </Root/Cylinder_1/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
 
             def Shader "DefaultSurfaceShader"
             {

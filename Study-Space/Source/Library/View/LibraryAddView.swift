@@ -14,7 +14,7 @@ struct LibraryAddView: View {
     @State private var title = ""
     @State private var author = ""
     @State private var fileName = ""
-    @State private var coverImageUrl = ""
+    @State private var coverImageName = ""
     @State private var pdfFileURL: URL?
     @State private var showingFilePicker = false
     
@@ -23,7 +23,7 @@ struct LibraryAddView: View {
             Form {
                 TextField("Title", text: $title)
                 TextField("Author", text: $author)
-                TextField("Cover Image URL", text: $coverImageUrl)
+                TextField("Cover Image Name", text: $coverImageName)
                 
                 Button("Select PDF File") {
                     showingFilePicker = true
@@ -42,7 +42,7 @@ struct LibraryAddView: View {
                             title: title,
                             fileName: fileName,
                             author: author,
-                            coverImageUrl: URL(string: coverImageUrl),
+                            coverImageName: coverImageName,
                             pdfUrl: url
                         )
                         viewModel.addBook(newBook)

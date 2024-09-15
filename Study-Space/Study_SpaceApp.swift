@@ -21,6 +21,11 @@ struct Study_SpaceApp: App {
             Polynomial3DGraphView()
         }
 
+        WindowGroup(id: "Molecule3D") {
+            Molecule3DView()
+        }
+        .windowStyle(.volumetric)
+        
         WindowGroup(id: "Summary") {
             SummaryScreen()
         }
