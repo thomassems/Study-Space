@@ -19,7 +19,7 @@ def Xform "Root"
         double radius = 0.4
         quatf xformOp:orient = (1, 0, 0, 0)
         float3 xformOp:scale = (0.3, 0.3, 0.3)
-        float3 xformOp:translate = (-0.2348805, 0.019728526, 1.648441e-7)
+        float3 xformOp:translate = (-0.2348805, 0.019728526, -10)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
@@ -49,7 +49,7 @@ def Xform "Root"
         double radius = 0.4
         quatf xformOp:orient = (1, 0, 0, 0)
         float3 xformOp:scale = (0.3, 0.3, 0.3)
-        float3 xformOp:translate = (0.23682803, 0.019728526, 1.648441e-7)
+        float3 xformOp:translate = (0.23682803, 0.019728526, -10)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"
@@ -81,10 +81,10 @@ def Xform "Root"
         uniform token axis = "Y"
         double height = 0.3
         rel material:binding = </Root/Cylinder_1/DefaultMaterial>
-        double radius = 0.05
+        double radius = 0.03
         quatf xformOp:orient = (0.7074075, 0, 0, 0.70680594)
         float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (0.0070213974, 0.018603347, 0)
+        float3 xformOp:translate = (0.0070213974, 0.018603347, -10)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Material "DefaultMaterial"

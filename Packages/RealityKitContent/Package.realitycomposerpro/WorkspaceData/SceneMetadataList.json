@@ -122,24 +122,6 @@
       {
         "isExpanded" : true,
         "isLocked" : false
-      },
-      [
-        "83274CE2-4E85-4ECB-B338-5BCF0F4472C8",
-        "Root",
-        "Sphere_1"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "83274CE2-4E85-4ECB-B338-5BCF0F4472C8",
-        "Root",
-        "Sphere_2"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
       }
     ]
   },
