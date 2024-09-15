@@ -92,6 +92,7 @@ struct BookView: View {
                 .overlay(alignment: .topLeading) {
                     Button {
                         withAnimation {
+                            lockedIn = false
                             selectedBookID = nil
                         }
                     } label: {
