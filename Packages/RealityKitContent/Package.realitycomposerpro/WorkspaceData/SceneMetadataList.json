@@ -56,6 +56,18 @@
       }
     ]
   },
+  "80D61720-A4C4-4639-9286-4AAC231848D5" : {
+    "objectMetadataList" : [
+      [
+        "80D61720-A4C4-4639-9286-4AAC231848D5",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
   "369F73F9-97D2-4332-8A21-E5CF80B41630" : {
     "objectMetadataList" : [
       [
@@ -73,6 +85,15 @@
       [
         "10978F5F-0DB4-4DC0-AE12-12F7E63CE8AA",
         "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "10978F5F-0DB4-4DC0-AE12-12F7E63CE8AA",
+        "Root",
+        "Group"
       ],
       {
         "isExpanded" : true,
@@ -96,8 +117,7 @@
     "objectMetadataList" : [
       [
         "83274CE2-4E85-4ECB-B338-5BCF0F4472C8",
-        "Root",
-        "Sphere_2"
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -114,7 +134,8 @@
       },
       [
         "83274CE2-4E85-4ECB-B338-5BCF0F4472C8",
-        "Root"
+        "Root",
+        "Sphere_2"
       ],
       {
         "isExpanded" : true,
@@ -139,6 +160,15 @@
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root",
+        "Sphere_1"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
         "Sphere_2"
       ],
       {
@@ -148,15 +178,6 @@
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "AF09ED6F-1707-48FD-8720-65B998362C09",
-        "Root",
-        "Sphere_1"
       ],
       {
         "isExpanded" : true,
@@ -177,7 +198,8 @@
     "objectMetadataList" : [
       [
         "CB766F92-EE55-4A63-9401-E7B8C009764D",
-        "Root"
+        "Root",
+        "GridMaterial"
       ],
       {
         "isExpanded" : true,
@@ -185,8 +207,7 @@
       },
       [
         "CB766F92-EE55-4A63-9401-E7B8C009764D",
-        "Root",
-        "GridMaterial"
+        "Root"
       ],
       {
         "isExpanded" : true,

@@ -14,21 +14,26 @@ struct LibraryAddView: View {
     @State private var title = ""
     @State private var author = ""
     @State private var fileName = ""
-    @State private var coverImageUrl = ""
+    @State private var coverImageName = ""
     @State private var pdfFileURL: URL?
     @State private var showingFilePicker = false
-    
+    @State private var showingMASVPicker = false
+
     var body: some View {
         NavigationView {
             Form {
                 TextField("Title", text: $title)
                 TextField("Author", text: $author)
-                TextField("Cover Image URL", text: $coverImageUrl)
+                TextField("Cover Image Name", text: $coverImageName)
                 
                 Button("Select PDF File") {
                     showingFilePicker = true
                 }
                 
+                Button("Or use MASV to upload PDF") {
+                    showingMASVPicker = true
+                }
+
                 if let url = pdfFileURL {
                     Text("Selected file: \(url.lastPathComponent)")
                 }
@@ -42,7 +47,7 @@ struct LibraryAddView: View {
                             title: title,
                             fileName: fileName,
                             author: author,
-                            coverImageUrl: URL(string: coverImageUrl),
+                            coverImageName: coverImageName,
                             pdfUrl: url
                         )
                         viewModel.addBook(newBook)
@@ -64,5 +69,16 @@ struct LibraryAddView: View {
                 print("Error selecting file: \(error.localizedDescription)")
             }
         }
+        .sheet(isPresented: $showingMASVPicker, content: {
+     
+            LibraryWebView(url: URL(string: "https://nicksteamportal8010193108.portal.massive.io/")!)
+                .overlay(alignment: .topTrailing) {
+                    
+                    Button("Close") {
+                        showingMASVPicker = false
+                    }
+                    .padding()
+                }
+        })
     }
 }

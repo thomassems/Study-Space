@@ -14,30 +14,20 @@ struct LibraryBookView: View {
     var body: some View {
         VStack {
             ZStack(alignment: .topTrailing) {
-                if let coverImageUrl = book.coverImageUrl {
-                    AsyncImage(url: coverImageUrl) { image in
-                        image.resizable()
-                    } placeholder: {
-                        Color.gray
-                    }
-                    .aspectRatio(2/3, contentMode: .fit)
-                    .frame(height: 300)
-                    .cornerRadius(10)
-                    .shadow(radius: 5)
-                } else {
-                    Rectangle()
-                        .fill(Color.gray)
+                if let coverImageName = book.coverImageName,
+                   let uiImage = UIImage(named: coverImageName, in: .main, with: nil) {
+                    Image(uiImage: uiImage)
+                        .resizable()
                         .aspectRatio(2/3, contentMode: .fit)
                         .frame(height: 300)
                         .cornerRadius(10)
                         .shadow(radius: 5)
-                        .overlay(
-                            Text(book.title)
-                                .font(.caption)
-                                .foregroundColor(.white)
-                                .multilineTextAlignment(.center)
-                                .padding(5)
-                        )
+                } else {
+                    Color.gray
+                        .aspectRatio(2/3, contentMode: .fit)
+                        .frame(height: 300)
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
                 }
                 
                 Toggle(isOn: $isFavorite) {

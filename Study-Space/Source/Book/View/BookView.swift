@@ -163,6 +163,15 @@ struct BookView: View {
                     Text("Summarize")
                 }
             }
+            
+            Button {
+                openWindow(id: "Molecule3D")
+            } label: {
+                HStack {
+                    Image(systemName: "molecule")
+                    Text("View Molecules")
+                }
+            }
 
             Spacer()
 
@@ -307,7 +316,6 @@ struct SummaryScreen: View {
             title: "Sample Book",
             fileName: "chem",
             author: "John Doe",
-            coverImageUrl: URL(string: "https://example.com/cover.jpg"),
             pdfUrl: Bundle.main.url(forResource: "algorithms", withExtension: "pdf")!,
             lastReadDate: Date(),
             isFavorite: false

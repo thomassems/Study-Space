@@ -11,6 +11,9 @@
 def Xform "Root"
 {
     reorder nameChildren = ["Cylinder", "Sphere_1", "Sphere_2"]
+    float3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
     def Sphere "Sphere_1" (
         active = true
         prepend apiSchemas = ["MaterialBindingAPI"]
