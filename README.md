@@ -14,7 +14,7 @@ How it works is very simple:
 
 Now that's cool, but how did we make it cooler?
 - Firstly, we have 2 AI tools at your disposal:
-  - We have a summarizer, which simply takes the page at hand, and summarizes is it in grade 7 level English, so anyone can understand the main details!
+  - We have a summarizer, which simply takes the page at hand, and summarizes is it in lower level English (like grade 7 level for example), so anyone can understand the main details!
   - Second tool is an interactive Chatbot. You simply ask it questions via the microphone, and it responds to your questions. We programmed it, so that it takes the context of the reading, and only allows input to related   questions. For example, a reading on gravity and motion, would answer questions related to Isaac Newton's contributions, but would not respond to, "How do I cook Spaghetti" (you should know this anyways!).
 - We visualized math equations! If a math textbook has an equation on the page, simply look at it and pinch your fingers, and BOOM, you got yourself an interactive graph you can play around with of the equation at hand!
 - Want to see the physical objects in the reading? Easy, same thing, look at the object, pinch your fingers, and you get a 3D model of the object to interact with. Unfortunately, we did not have a large enough library of these objects and time to implement more, so we only made it so that it can show chemical molecules. If there's interest, we'd revisit this, likely implementing some sort of library with these objects that would get mapped to keywords within the text.
