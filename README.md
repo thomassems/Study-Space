@@ -7,7 +7,7 @@ Ever tasked with reading a research paper, a data structures and algorithms text
 Sometimes, we're "in the zone", and sometimes, we simply cannot concentrate, whether it be due to surroundings, lack of coffee, or tight deadlines, we made this app to help get you "Locked In" and thoroughly understand the material! 
 
 How it works is very simple: 
-- Upload a pdf, or purchase it from our store
+- Upload a pdf, or purchase it from our store (it's not a real store, if actually deployed, we'd try to make it free)
 - Once it's uploaded, simply click on the reading you uploaded, and start reading. The file itself gets stored on AWS S3 and the metadata (we didn't fully implement it) in Convex.
 - If you need to get into the zone, go into "Locked In" Mode! 
   - Here, ambient music starts to play to reduce background noise, and the background changes to be related to the subject at hand, for example a lab, if you are reading a Chemistry book
