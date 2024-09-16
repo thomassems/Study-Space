@@ -4,6 +4,10 @@ LockedIn is a visionOS app for the Apple Vision Pro, built at Hack The North 202
 
 Our backend repo is [here](https://github.com/mingchungx/Study-Space-backend).
 
+Devpost project: https://devpost.com/software/lockedin-4rvey8?ref_content=user-portfolio&ref_feature=in_progress
+
+To see it in action, check this video out: https://www.youtube.com/watch?v=gdu7u9qX8E0
+
 <img width="1440" alt="Screenshot_2024-09-15_at_4 06 43_AM" src="https://github.com/user-attachments/assets/7a5df4d8-eb7f-459e-b48e-42e070215c64">
 <img width="1440" alt="Screenshot_2024-09-15_at_4 07 10_AM" src="https://github.com/user-attachments/assets/d19d96d4-88ae-46a7-9be4-559df4c5d0ab">
 <img width="1440" alt="Screenshot_2024-09-15_at_4 07 57_AM" src="https://github.com/user-attachments/assets/5f3a6eb7-95f6-4d29-9a7e-bfd8e1e84a30">
