@@ -13,7 +13,7 @@ How it works is very simple:
   - Here, ambient music starts to play to reduce background noise, and the background changes to be related to the subject at hand, for example a lab, if you are reading a Chemistry book
 
 Now that's cool, but how did we make it cooler?
-- Firstly, we have 2 AI tools at your disposal:
+- Firstly, we have 2 AI tools at your disposal, both built from Cohere:
   - We have a summarizer, which simply takes the page at hand, and summarizes is it in lower level English (like grade 7 level for example), so anyone can understand the main details!
   - Second tool is an interactive Chatbot. You simply ask it questions via the microphone, and it responds to your questions. We programmed it, so that it takes the context of the reading, and only allows input to related   questions. For example, a reading on gravity and motion, would answer questions related to Isaac Newton's contributions, but would not respond to, "How do I cook Spaghetti" (you should know this anyways!).
 - We visualized math equations! If a math textbook has an equation on the page, simply look at it and pinch your fingers, and BOOM, you got yourself an interactive graph you can play around with of the equation at hand!
